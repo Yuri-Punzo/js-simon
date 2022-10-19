@@ -57,7 +57,7 @@ const intervalId = setInterval(function () {
 }, 1000)
 
 let count = 0
-
+let answerArray = []
 setTimeout(function () {
     if (seconds == 0) {
         for (let i = 0; i < numbers.length; i++) {
@@ -65,9 +65,11 @@ setTimeout(function () {
             if (numbers.includes(Number(answer))) {
                 //console.log("ok");
                 count++
-                console.log(`${answer} ! Risposta correta! Ne hai azzeccati: ${count}`);
+                answerArray.push(answer)
             }
         }
+        console.log(`${count} risposte correte ! Hai ricordato questi numeri:${answerArray} `);
+        //console.log(answerArray);
     } else {
         seconds_2--;
     }
@@ -75,6 +77,6 @@ setTimeout(function () {
 
 
 
-
+//console.log(answerArray);
 
 
