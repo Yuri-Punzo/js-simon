@@ -56,21 +56,18 @@ const intervalId = setInterval(function () {
     }
 }, 1000)
 
-let answer
 let count = 0
-
 
 setTimeout(function () {
     if (seconds == 0) {
         for (let i = 0; i < numbers.length; i++) {
-            answer = Number(prompt("immetti uno dei numeri"))
-            if (numbers.includes(answer)){
-                console.log("ok");
+            let answer = prompt("immetti uno dei numeri")
+            if (numbers.includes(Number(answer))) {
+                //console.log("ok");
+                count++
+                console.log(`${answer} ! Risposta correta! Ne hai azzeccati: ${count}`);
             }
-            /* console.log(answer);
-            count++
-            console.log(count); */
-        } 
+        }
     } else {
         seconds_2--;
     }
