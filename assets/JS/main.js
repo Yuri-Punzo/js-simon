@@ -45,7 +45,7 @@ numbersArrayGenerator();
 
 document.querySelector(".game_numbers").innerText = numbers;
 
-let seconds = 5 //inizio countdown da 30
+let seconds = 5 //inizio countdown da 5 per comodità
 const intervalId = setInterval(function () {
     document.querySelector(".countdown").innerText = seconds; //inserisco il countdown
     if (seconds == 0) {
@@ -77,10 +77,6 @@ setTimeout(function () {
             console.log("Oh, manco uno ne hai azzecato !");
         }
     }
-}, 7000)
-
-
-
-//console.log(answerArray);
+}, 7000) //metto qualche secondo di delay rispetto al countdown per dare tempo alla prima funzione di cancellare tutto prima che appaia il prompt che chiede le risposte
 
 
