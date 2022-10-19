@@ -43,5 +43,35 @@ function numbersArrayGenerator() {
 }
 numbersArrayGenerator();
 
+document.querySelector(".game_numbers").innerText = numbers;
+
+let seconds = 5 //inizio countdown da 30
+const intervalId = setInterval(function () {
+    document.querySelector(".countdown").innerText = seconds; //inserisco il countdown
+    if (seconds == 0) {
+        document.querySelector(".game_numbers").classList.add("d-none");
+        clearInterval(intervalId);
+    } else {
+        seconds--;
+    }
+}, 1000)
+
+
+let seconds_2 = 6
+const intervalId_2 = setInterval(function () {
+    if (seconds_2 == 0) {
+        clearInterval(intervalId_2);
+        for (let i = 0; i < numbers.length; i++) {
+            const element = numbers[i];
+            prompt("immetti numero")            
+        } 
+    } else {
+        seconds_2--;
+    }
+}, 1000)
+
+let count = 0
+
+
 
 
