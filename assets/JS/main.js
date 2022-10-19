@@ -69,10 +69,10 @@ setTimeout(function () {
             }
         }
         //console.log(answerArray);
-        if (answerArray.length = 1) {
+        if (answerArray.length > 1) {
+            console.log(`${count} risposte corrette ! Hai ricordat* questi numeri: ${answerArray}`);            
+        } else if (answerArray.length = 1) {
             console.log(`${count} risposta corretta ! Hai ricordat* questo numero: ${answerArray}`);
-        } else if (answerArray.length > 1) {
-            console.log(`${count} risposte corrette ! Hai ricordat* questi numeri: ${answerArray}`);
         } else {
             console.log("Oh, manco uno ne hai azzecato !");
         }
