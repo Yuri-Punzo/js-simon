@@ -68,10 +68,12 @@ setTimeout(function () {
                 answerArray.push(answer)
             }
         }
-        console.log(`${count} risposte correte ! Hai ricordato questi numeri:${answerArray} `);
         //console.log(answerArray);
-    } else {
-        seconds_2--;
+        if (answerArray.length >= 1) {
+            console.log(`${count} risposte correte ! Hai ricordat* questi numeri: ${answerArray}`);            
+        } else {
+            console.log("Non te ne sei ricordat* manco uno !");
+        }
     }
 }, 7000)
 
