@@ -69,10 +69,12 @@ setTimeout(function () {
             }
         }
         //console.log(answerArray);
-        if (answerArray.length >= 1) {
-            console.log(`${count} risposte correte ! Hai ricordat* questi numeri: ${answerArray}`);            
+        if (answerArray.length = 1) {
+            console.log(`${count} risposta correta ! Hai ricordat* questo numero: ${answerArray}`);
+        } else if (answerArray.length > 1) {
+            console.log(`${count} risposte correte ! Hai ricordat* questi numeri: ${answerArray}`);
         } else {
-            console.log("Non te ne sei ricordat* manco uno !");
+            console.log("Oh, manco uno ne hai azzecato !");
         }
     }
 }, 7000)
